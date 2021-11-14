@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>File Sending</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<form action="FileSending" method="post" enctype = "multipart/form-data">
+
+    <div>
+        <h1>Wysyłanie pliku</h1>
+        <div>
+            <div style="align-content: flex-start">
+                Wybierz Folder
+                <select name="folder" id="folder">
+                    <option value="Zdjecia">Zdjecia</option>
+                    <option value="Dokuemnty">Dokuemnty</option>
+                    <option value="Muzyka">Muzyka</option>
+                    <option value="Modele">Modele</option>
+                    <option value="Inne">Inne</option>
+                </select>
+            </div>
+        </div>
+            <div>
+                <input type="file" name="file" />
+            </div>
+            <div>
+                <input type="submit" value="Wyślij">
+            </div>
+
+    </div>
+</form>
+</body>
+</html>

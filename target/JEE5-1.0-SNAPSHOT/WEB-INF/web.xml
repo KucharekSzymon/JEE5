@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>Logowanie</servlet-name>
+        <servlet-class>com.mycompany.jee5.Logowanie</servlet-class>
+        <init-param>
+            <param-name>login</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>admin1</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>FileSending</servlet-name>
+        <servlet-class>com.mycompany.jee5.FileSending</servlet-class>
+        <multipart-config>
+            <location>C:\\</location>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet>
+        <servlet-name>download</servlet-name>
+        <servlet-class>com.mycompany.jee5.download</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logowanie</servlet-name>
+        <url-pattern>/Logowanie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileSending</servlet-name>
+        <url-pattern>/FileSending</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>download</servlet-name>
+        <url-pattern>/download/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

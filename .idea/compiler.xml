@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="JEE5" options="-endorseddirs &quot;E:\Informatyka III rok\Semestr 5\Zaawansowana Java\JEE5\target/endorsed&quot;" />
+      <module name="JEE5" options="-endorseddirs &quot;C:\Users\Laptop\Desktop\Semestr 5\Zaawansowana Java\JEE5\target/endorsed&quot;" />
     </option>
   </component>
 </project>

@@ -42,7 +42,7 @@ public class Logowanie extends HttpServlet {
             if(usr.equals(getServletConfig().getInitParameter("login")) && pass.equals(getServletConfig().getInitParameter("password"))){
                 out.println("Logged, data saved");
                 try {
-                    File myObj = new File("E:\\Informatyka III rok\\Semestr 5\\Zaawansowana Java\\JEE5\\data.txt");
+                    File myObj = new File("C:\\Users\\Public\\Documents\\servlet\\data.txt");
                     if (myObj.createNewFile()) {
                         System.out.println("File created: " + myObj.getName());
                     } else {
@@ -53,7 +53,7 @@ public class Logowanie extends HttpServlet {
                     e.printStackTrace();
                 }
                 try {
-                    Files.write(Paths.get("E:\\Informatyka III rok\\Semestr 5\\Zaawansowana Java\\JEE5\\data.txt"), data.getBytes(), StandardOpenOption.APPEND);
+                    Files.write(Paths.get("C:\\Users\\Public\\Documents\\servlet\\data.txt"), data.getBytes(), StandardOpenOption.APPEND);
                 }catch (IOException e) {
                     //exception handling left as an exercise for the reader
                 }
